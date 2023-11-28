@@ -1,4 +1,5 @@
 #include "audio.h"
+#include "util.h"
 
 static dacsample_t square_wave[2] = {
     AUDIO_DAC_OFF_VALUE,
@@ -20,14 +21,14 @@ uint16_t dac_value_generate(void) {
 
     for (size_t i = 0; i < n_tones; i++) {
         float new_wavetable_index = wavetable_indices[i];
-        new_wavetable_index += audio_get_frequency(i) * ((float)(sizeof(square_wave) / sizeof(square_wave[0])) / AUDIO_DAC_SAMPLE_RATE * 2.0f / 3.0f);
+        new_wavetable_index += audio_get_frequency(i) * ((float)ARRAY_SIZE(square_wave) / AUDIO_DAC_SAMPLE_RATE * 2.0f / 3.0f);
         /* Note: the 2/3 are necessary to get the correct frequencies on the
          *       DAC output (as measured with an oscilloscope), since the gpt
          *       timer runs with 3*AUDIO_DAC_SAMPLE_RATE; and the DAC callback
          *       is called twice per conversion.*/
 
-        while (new_wavetable_index >= sizeof(square_wave) / sizeof(square_wave[0]))
-            new_wavetable_index -= sizeof(square_wave) / sizeof(square_wave[0]);
+        while (new_wavetable_index >= ARRAY_SIZE(square_wave))
+            new_wavetable_index -= ARRAY_SIZE(square_wave);
 
         value += square_wave[(size_t)new_wavetable_index];
         wavetable_indices[i] = new_wavetable_index;
