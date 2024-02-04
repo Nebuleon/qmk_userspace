@@ -54,4 +54,16 @@
 #define IL_TOGG LED_LEVEL            /* stands for Indicator Led TOGGle */
 #define LC_TOGG TOGGLE_LAYER_COLOR   /* stands for Layer Color TOGGle */
 
+/* \brief Converts a modifier bitfield for use with MT, i.e. where the side
+ *        of all modifiers, left or right, is represented with one bit, to
+ *        a modifier bitfield where each modifier on each side gets its own
+ *        bit, for use with get_mods() and related functions.
+ * \param mods the 5-bit modifiers to convert
+ * \return the modifiers in 'mods', converted into an 8-bit bitfield
+ */
+uint8_t mt_to_mod_bits(uint8_t mods);
+
 extern const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS];
+
+extern uint8_t toggle_hold_held_mods;
+extern uint8_t toggle_hold_locked_mods;

@@ -59,18 +59,29 @@
     /* On L_Web */ \
     GENERATE(_RFSH, KC_F5, LCTL(KC_F5)) \
 
+#define GENERATE_TAP_DANCES_TOGGLE_HOLD_MOD(GENERATE) \
+    /* On L_DvorakLX, right thumb cluster */ \
+    GENERATE(_LCTL, MOD_LCTL) \
+    GENERATE(_LSFT, MOD_LSFT) \
+    GENERATE(_LALT, MOD_LALT) \
+    GENERATE(_LGUI, MOD_LGUI) \
+
 #define DN_ENUM_TAP_DOUBLE_TAP_CUSTOM(dance_name) DN##dance_name,
 #define DN_ENUM_TAP_HOLD(dance_name, kc_tap, kc_hold) DN##dance_name,
+#define DN_ENUM_TOGGLE_HOLD_MOD(dance_name, mods) DN##dance_name,
 
 enum tap_dances_dn {
     GENERATE_TAP_DANCES_TAP_HOLD(DN_ENUM_TAP_HOLD)
+    GENERATE_TAP_DANCES_TOGGLE_HOLD_MOD(DN_ENUM_TOGGLE_HOLD_MOD)
     GENERATE_TAP_DANCES_TAP_DOUBLE_TAP_CUSTOM(DN_ENUM_TAP_DOUBLE_TAP_CUSTOM)
 };
 
 #define TD_ENUM_TAP_DOUBLE_TAP_CUSTOM(dance_name) TD##dance_name = TD(DN##dance_name),
 #define TD_ENUM_TAP_HOLD(dance_name, kc_tap, kc_hold) TD##dance_name = TD(DN##dance_name),
+#define TD_ENUM_TOGGLE_HOLD_MOD(dance_name, mods) TD##dance_name = TD(DN##dance_name),
 
 enum tap_dances_td {
     GENERATE_TAP_DANCES_TAP_HOLD(TD_ENUM_TAP_HOLD)
+    GENERATE_TAP_DANCES_TOGGLE_HOLD_MOD(TD_ENUM_TOGGLE_HOLD_MOD)
     GENERATE_TAP_DANCES_TAP_DOUBLE_TAP_CUSTOM(TD_ENUM_TAP_DOUBLE_TAP_CUSTOM)
 };

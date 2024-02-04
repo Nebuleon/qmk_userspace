@@ -29,8 +29,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, TD_SCLC, TD_CMLA, TD_DTLP, TD_P_LB, TD_Y_UN, KC_UP,            KC_LEFT, TD_F_EQ, TD_G_RB, TD_C_RP, TD_R_RA, TD_X_RC, TT_Web,
     KC_BSPC, TD_A_DL, TD_O_DQ, TD_E_MI, TD_U_PC, TD_I_AM, KC_DOWN,          KC_RGHT, TD_D_PI, TD_H_AT, TD_T_PL, TD_N_SQ, TD_S_TI, TT_Phrs,
     KC_DEL,  TD_CLLD, TD_Q_EX, TD_J_SL, TD_K_BS, TD_L_NB,                            TD_B_DG, TD_M_HA, TD_W_AS, TD_V_QU, TD_Z_RD, _______,
-    _______, KC_LGUI, SC_LAAP, TT_Move, TT_Nums,          TT_FnMs,          KC_LGUI,          TT_Syms, TT_DvAc, KC_RALT, _______, TT_RGBC,
-                                        SC_LSSP, SC_LCEN, SC_TAWT,          SC_LAAP, KC_LCTL, KC_LSFT
+    _______, KC_LGUI, SC_LAAP, TT_Move, TT_Nums,          TT_FnMs,          TD_LGUI,          TT_Syms, TT_DvAc, KC_RALT, _______, TT_RGBC,
+                                        SC_LSSP, SC_LCEN, SC_TAWT,          TD_LALT, TD_LCTL, TD_LSFT
   ),
   [L_Control] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
@@ -85,16 +85,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, FR_SCLN, FR_7,    FR_8,    FR_9,    FR_COMM, _______,          _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
     _______, FR_COLN, FR_4,    FR_5,    FR_6,    FR_DOT,  _______,          _______, FR_EQL,  FR_PLUS, FR_MINS, FR_ASTR, FR_SLSH, _______,
     _______, FR_0,    FR_1,    FR_2,    FR_3,    XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-    _______, _______, _______, _______, _leave_,          _______,          KC_RGUI,          _______, _______, _______, _______, _______,
-                                        _______, _______, _______,          SC_LAAP, KC_RCTL, KC_RSFT
+    _______, _______, _______, _______, _leave_,          _______,          TD_LGUI,          _______, _______, _______, _______, _______,
+                                        _______, _______, _______,          TD_LALT, TD_LCTL, TD_LSFT
   ),
   [L_FnMouse] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
     _______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX, _______,          _______, XXXXXXX, KC_BTN1, KC_MS_U, KC_BTN2, KC_WH_U, _______,
     _______, KC_F5,   KC_F6,   KC_F7,   KC_F8,   XXXXXXX, _______,          _______, XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, _______,
     _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-    _______, _______, _______, _______, _______,          _leave_,          KC_LGUI,          _______, _______, _______, _______, _______,
-                                        _______, _______, _______,          SC_LAAP, KC_LCTL, KC_LSFT
+    _______, _______, _______, _______, _______,          _leave_,          TD_LGUI,          _______, _______, _______, _______, _______,
+                                        _______, _______, _______,          TD_LALT, TD_LCTL, TD_LSFT
   ),
   [L_Web] = LAYOUT_moonlander(
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,          _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,

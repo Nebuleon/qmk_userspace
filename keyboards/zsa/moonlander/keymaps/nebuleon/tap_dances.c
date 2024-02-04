@@ -17,8 +17,6 @@ typedef struct {
     uint16_t kc_hold; /* Keycode to be sent on a held key */
 } tap_dance_tap_hold_t;
 
-static_assert(GENERATE_TAP_DANCES_TAP_HOLD(LENGTH_TAP_HOLD) <= UINT8_MAX + 1, "Number of tap dances must fit within a byte");
-
 static tap dance_state[GENERATE_TAP_DANCES_TAP_HOLD(LENGTH_TAP_HOLD)];
 
 void tapdance_lowlatency_press(tap_dance_state_t *state, void *user_data) {
@@ -112,11 +110,82 @@ void clear_lock_reset(tap_dance_state_t *state, void *user_data) {
     }
 }
 
+/* - - - TAP-TOGGLE MODS IMPLEMENTATION - - - */
+
+typedef struct {
+    uint8_t mods; /* Modifiers to be toggled by this dance */
+} tap_dance_toggle_hold_mod_t;
+
+uint8_t toggle_hold_held_mods;
+uint8_t toggle_hold_locked_mods;
+
+void toggle_hold_mod_press(tap_dance_state_t *state, void *user_data) {
+    tap_dance_toggle_hold_mod_t *dance_data = (tap_dance_toggle_hold_mod_t *) user_data;
+    uint8_t mods = mt_to_mod_bits(pgm_read_byte(&dance_data->mods));
+
+    bool are_locked = (toggle_hold_locked_mods & mods) == mods;
+
+    toggle_hold_held_mods |= mods;
+    if (!are_locked) {
+        register_mods(mods);
+    }
+}
+
+void toggle_hold_mod_release(tap_dance_state_t *state, void *user_data) {
+    tap_dance_toggle_hold_mod_t *dance_data = (tap_dance_toggle_hold_mod_t *) user_data;
+    uint8_t mods = mt_to_mod_bits(pgm_read_byte(&dance_data->mods));
+
+    bool are_locked = (toggle_hold_locked_mods & mods) == mods;
+
+    toggle_hold_held_mods &= ~mods;
+
+    /* As of when a tap dance starts, the weak mods are preserved but unapplied.
+     * Apply them here, otherwise we will send a report with modifiers released.
+     */
+    add_weak_mods(state->weak_mods);
+#ifndef NO_ACTION_ONESHOT
+    add_mods(state->oneshot_mods);
+#endif
+
+    if (state->interrupted || state->finished) {
+        /* If the toggle-mod key was either pressed along with another key or
+         * held for longer than the tapping term, do not toggle locking, but
+         * instead release the modifiers at the host if they are not locked. */
+        if (!are_locked) {
+            unregister_mods(mods);
+        }
+    } else {
+        /* If the toggle-mod key was tapped, toggle locking. */
+        if (are_locked) {
+            toggle_hold_locked_mods &= ~mods;
+            unregister_mods(mods);
+        } else {
+            toggle_hold_locked_mods |= mods;
+        }
+    }
+}
+
+#define DATA_TOGGLE_HOLD_MOD(dance_name, mods) { (mods) },
+
+#define ACTION_TOGGLE_HOLD_MOD(dance_name, mods) \
+     [DN##dance_name] = { .fn = { toggle_hold_mod_press, NULL, NULL, toggle_hold_mod_release }, .user_data = (void *) &toggle_hold_mod_data[DN##dance_name - (GENERATE_TAP_DANCES_TAP_HOLD(LENGTH_TAP_HOLD))], },
+
+#define LENGTH_TOGGLE_HOLD_MOD(dance_name, mods) + 1
+
+const tap_dance_toggle_hold_mod_t PROGMEM toggle_hold_mod_data[] = {
+    GENERATE_TAP_DANCES_TOGGLE_HOLD_MOD(DATA_TOGGLE_HOLD_MOD)
+};
+
+/* - - - END TAP-TOGGLE MODS IMPLEMENTATION - - - */
+
+static_assert(GENERATE_TAP_DANCES_TAP_HOLD(LENGTH_TAP_HOLD) + GENERATE_TAP_DANCES_TOGGLE_HOLD_MOD(LENGTH_TOGGLE_HOLD_MOD) + 1 /* the Lock dance */ <= UINT8_MAX + 1, "Number of tap dances must fit within a byte");
+
 const tap_dance_tap_hold_t PROGMEM tap_hold_data[] = {
     GENERATE_TAP_DANCES_TAP_HOLD(DATA_TAP_HOLD)
 };
 
 tap_dance_action_t tap_dance_actions[] = {
     GENERATE_TAP_DANCES_TAP_HOLD(ACTION_TAP_HOLD)
+    GENERATE_TAP_DANCES_TOGGLE_HOLD_MOD(ACTION_TOGGLE_HOLD_MOD)
     [DN_LOCK] = { .fn = { clear_lock_press, NULL, clear_lock_reset } },
 };

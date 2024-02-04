@@ -414,6 +414,43 @@ void set_layer_color(void) {
                         }
                         break;
 #endif
+                    /* Tap Dance keys implementing Toggle-Hold Mods. */
+                    case TD_LSFT:
+                    case TD_LCTL:
+                    case TD_LALT:
+                    case TD_LGUI: {
+                        uint8_t key_toggle_hold_mods;
+                        switch (keycode) {
+                            case TD_LSFT:
+                                key_toggle_hold_mods = MOD_BIT(KC_LSFT);
+                                break;
+                            case TD_LCTL:
+                                key_toggle_hold_mods = MOD_BIT(KC_LCTL);
+                                break;
+                            case TD_LALT:
+                                key_toggle_hold_mods = MOD_BIT(KC_LALT);
+                                break;
+                            case TD_LGUI:
+                                key_toggle_hold_mods = MOD_BIT(KC_LGUI);
+                                break;
+                        }
+                        /* a) Keep the brightness of the glow if all of the
+                         *    modifiers it toggle-holds are currently locked
+                         *    and make it blink. */
+                        if ((toggle_hold_locked_mods & key_toggle_hold_mods) == key_toggle_hold_mods) {
+                            hsv.v = BLINK_BRIGHTNESS(hsv.v);
+                        }
+                        /* b) Keep the brightness of the glow if all of the
+                         *    modifiers it toggle-holds are currently held. */
+                        else if ((toggle_hold_held_mods & key_toggle_hold_mods) == key_toggle_hold_mods) {
+                        }
+                        /* c) Reduce the brightness of the glow if any of the
+                         *    modifiers it toggle-holds isn't currently active. */
+                        else {
+                            hsv.v = REDUCE_BRIGHTNESS(hsv.v);
+                        }
+                        break;
+                    }
                     default:
                         break;
                 }
