@@ -7,7 +7,8 @@ TAP_DANCE_ENABLE = yes
 SPACE_CADET_ENABLE = no
 MIDI_ENABLE = yes
 DYNAMIC_TAPPING_TERM_ENABLE = yes
-SRC = matrix.c rgb.c tap_dances.c
+SRC = matrix.c rgb.c
+INTROSPECTION_KEYMAP_C = tap_dances.c
 LTO_ENABLE = yes
 ifeq ($(AUDIO_DRIVER), dac_additive)
 	SRC += audio_custom.c
