@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,          _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
     _______, FR_SCLN, FR_7,    FR_8,    FR_9,    FR_COMM, _______,          _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
     _______, FR_COLN, FR_4,    FR_5,    FR_6,    FR_DOT,  _______,          _______, FR_EQL,  FR_PLUS, FR_MINS, FR_ASTR, FR_SLSH, _______,
-    _______, FR_0,    FR_1,    FR_2,    FR_3,    XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+    _______, FR_0,    FR_1,    FR_2,    FR_3,    SC_NBSP,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
     _______, _______, _______, _______, _leave_,          _______,          TD_LGUI,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,          TD_LALT, TD_LCTL, TD_LSFT
   ),
