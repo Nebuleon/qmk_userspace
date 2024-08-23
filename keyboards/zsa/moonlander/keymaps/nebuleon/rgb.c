@@ -359,7 +359,7 @@ void set_layer_color(void) {
                         }
                         break;
 #endif
-                    case MAGIC_TOGGLE_NKRO:
+                    case QK_MAGIC_TOGGLE_NKRO:
                         /* For NKRO, reduce the brightness of the glow if the
                          * key rollover is set to 6. */
                         if (!keymap_config.nkro) {
