@@ -146,9 +146,9 @@ const uint8_t PROGMEM ledmaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [L_WindowsTerminals] = LEDMAP_moonlander(
     ________, PAL_TERM, PAL_TERM, PAL_TERM, PAL_TERM, PAL_TERM, ________,          ________, PAL_TERM, PAL_TERM, PAL_TERM, PAL_TERM, PAL_TERM, ________,
-    ________, PAL_SHDE, PAL_MIN,  PAL_MAX,  PAL_CLSE, XXXXXXXX, ________,          ________, XXXXXXXX, PAL_WSMO, PAL_WSMO, PAL_WSMO, PAL_WSMO, ________,
-    ________, PAL_SCRN, PAL_TILE, PAL_TILE, PAL_SCRN, XXXXXXXX, ________,          ________, XXXXXXXX, PAL_WSSW, PAL_WSSW, PAL_WSSW, PAL_WSSW, ________,
-    ________, XXXXXXXX, PAL_WNDW, PAL_WNDW, XXXXXXXX, XXXXXXXX,                              XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,
+    ________, PAL_SHDE, PAL_MIN,  PAL_MAX,  PAL_CLSE, PAL_ZIN,  ________,          ________, XXXXXXXX, PAL_WSMO, PAL_WSMO, PAL_WSMO, PAL_WSMO, ________,
+    ________, PAL_SCRN, PAL_TILE, PAL_TILE, PAL_SCRN, PAL_ZRST, ________,          ________, XXXXXXXX, PAL_WSSW, PAL_WSSW, PAL_WSSW, PAL_WSSW, ________,
+    ________, XXXXXXXX, PAL_WNDW, PAL_WNDW, XXXXXXXX, PAL_ZOUT,                              XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,
     ________, ________, ________, ________, ________,           _lleave_,          ________,           ________, ________, ________, ________, ________,
                                             ________, ________, ________,          ________, ________, ________
   ),

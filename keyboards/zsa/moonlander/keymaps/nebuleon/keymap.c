@@ -50,9 +50,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [L_WindowsTerminals] = LAYOUT_moonlander(
     _______, SC_CF1,  SC_CF2,  SC_CF3,  SC_CF4,  SC_CF5,  _______,          _______, SC_CF6,  SC_CF7,  SC_CF8,  SC_CF9,  SC_CF10, _______,
-    _______, KC_F3,   KC_F9,   KC_F10,  KC_F4,   XXXXXXX, _______,          _______, XXXXXXX, SC_GSF1, SC_GSF2, SC_GSF3, SC_GSF4, _______,
-    _______, SC_CGSL, SC_S_L,  SC_S_R,  SC_CGSR, XXXXXXX, _______,          _______, XXXXXXX, SC_GF1,  SC_GF2,  SC_GF3,  SC_GF4,  _______,
-    _______, XXXXXXX, SC_S_TB, KC_TAB,  XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+    _______, KC_F3,   KC_F9,   KC_F10,  KC_F4,   SC_G_PL, _______,          _______, XXXXXXX, SC_GSF1, SC_GSF2, SC_GSF3, SC_GSF4, _______,
+    _______, SC_CGSL, SC_S_L,  SC_S_R,  SC_CGSR, SC_G_0,  _______,          _______, XXXXXXX, SC_GF1,  SC_GF2,  SC_GF3,  SC_GF4,  _______,
+    _______, XXXXXXX, SC_S_TB, KC_TAB,  XXXXXXX, SC_G_MI,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
     _______, _______, _______, _______, _______,          _leave_,          _______,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,          _______, _______, _______
   ),

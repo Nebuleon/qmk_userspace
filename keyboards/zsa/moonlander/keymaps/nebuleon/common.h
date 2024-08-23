@@ -51,6 +51,9 @@
 #define SC_GSF4 LGUI(LSFT(KC_F4))
 #define SC_CGSL LCTL(LGUI(LSFT(KC_LEFT)))
 #define SC_CGSR LCTL(LGUI(LSFT(KC_RGHT)))
+#define SC_G_0  LGUI(KC_0)
+#define SC_G_MI LGUI(FR_MINS)
+#define SC_G_PL LGUI(FR_PLUS)
 #define IL_TOGG LED_LEVEL            /* stands for Indicator Led TOGGle */
 #define LC_TOGG TOGGLE_LAYER_COLOR   /* stands for Layer Color TOGGle */
 
