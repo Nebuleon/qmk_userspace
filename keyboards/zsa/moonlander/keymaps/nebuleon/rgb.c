@@ -179,8 +179,8 @@ const uint8_t PROGMEM ledmaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [L_Numbers] = LEDMAP_moonlander(
     ________, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,          ________, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,
     ________, PAL_SYM,  PAL_DIG,  PAL_DIG,  PAL_DIG,  PAL_SYM,  ________,          ________, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,
-    ________, PAL_SYM,  PAL_DIG,  PAL_DIG,  PAL_DIG,  PAL_SYM,  ________,          ________, PAL_SYM,  PAL_SYM,  PAL_SYM,  PAL_SYM,  PAL_SYM,  ________,
-    ________, PAL_DIG,  PAL_DIG,  PAL_DIG,  PAL_DIG,  PAL_SPC,                               XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,
+    ________, PAL_DIG,  PAL_DIG,  PAL_DIG,  PAL_DIG,  PAL_SYM,  ________,          ________, PAL_SYM,  PAL_SYM,  PAL_SYM,  PAL_SYM,  PAL_SYM,  ________,
+    ________, PAL_SYM,  PAL_DIG,  PAL_DIG,  PAL_DIG,  PAL_SPC,                               XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,
     ________, ________, ________, ________, _lleave_,           ________,          PAL_MOD,            ________, ________, ________, ________, ________,
                                             ________, ________, ________,          PAL_MOD,  PAL_MOD,  PAL_MOD
   ),
