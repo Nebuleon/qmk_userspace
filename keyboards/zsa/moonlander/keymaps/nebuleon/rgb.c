@@ -53,16 +53,7 @@ const HSV PROGMEM led_palette[] = {
     [PAL_WNDW] = { .h = 129, .s = 255, .v = 128 }, /* Window navigation shortcuts on L_WindowsTerminals: (Alt+)Shift+Tab, (Alt+)Tab */
     [PAL_WSSW] = { .h = 129, .s = 255, .v = 128 }, /* Workspace switching shortcuts on L_WindowsTerminals: GUI+(Alt+)Shift+F<number> */
     [PAL_WSMO] = { .h = 172, .s = 255, .v = 128 }, /* Window move to workspace shortcuts on L_WindowsTerminals: GUI+(Alt+)F<number> */
-    [PAL_SPLT] = { .h =   0, .s = 255, .v = 255 }, /* Split shortcut on L_Phrase: Ctrl+E */
-    [PAL_JOIN] = { .h =  86, .s = 255, .v = 255 }, /* Join shortcut on L_Phrase: Ctrl+J */
-    [PAL_SEG]  = { .h =  86, .s = 255, .v = 255 }, /* Accept and Reject segment shortcuts on L_Phrase: Ctrl+Enter, C+S+Enter */
-    [PAL_COMM] = { .h = 150, .s = 255, .v = 255 }, /* Add comment shortcut on L_Phrase: C+S+M */
-    [PAL_TMTB] = { .h = 150, .s = 255, .v = 255 }, /* (Exact) search in TM/TB shortcuts on L_Phrase: Ctrl+K, C+S+K */
-    [PAL_TABS] = { .h = 215, .s = 255, .v = 255 }, /* keys for moving between tabs in L_Web and L_Phrase */
-    [PAL_FLTR] = { .h = 150, .s = 255, .v = 255 }, /* Filter shortcut on L_Phrase: C+S+F */
-    [PAL_SINS] = { .h =   0, .s = 255, .v = 255 }, /* Copy source to target shortcut on L_Phrase: Ctrl+Insert */
-    [PAL_SUP]  = { .h =   0, .s =   0, .v = 255 }, /* Superscript shortcut on L_Phrase */
-    [PAL_SUB]  = { .h =   0, .s =   0, .v = 128 }, /* Subscript shortcut on L_Phrase */
+    [PAL_TABS] = { .h = 215, .s = 255, .v = 255 }, /* keys for moving between tabs in L_Web */
     [PAL_MBTN] = { .h = 112, .s = 255, .v = 255 }, /* mouse buttons */
     [PAL_MMOV] = { .h = 112, .s = 255, .v = 128 }, /* mouse movement */
     [PAL_MWHL] = { .h =   0, .s =   0, .v = 192 }, /* mouse wheel */
@@ -107,7 +98,6 @@ const HSV PROGMEM led_palette[] = {
     [PAL_Accs] = { .h =  21, .s = 255, .v = 255 }, /* layer entry to L_*Accents */
     [PAL_Move] = { .h = 129, .s = 255, .v = 255 }, /* layer entry to L_MoveSelect */
     [PAL_Syms] = { .h = 193, .s = 255, .v = 255 }, /* layer entry to L_Symbols */
-    [PAL_Phrs] = { .h = 118, .s = 255, .v = 240 }, /* layer entry to L_Phrase */
     [PAL_Nums] = { .h =   0, .s =   0, .v = 255 }, /* layer entry to L_Numbers */
     [PAL_FnMs] = { .h =  86, .s = 255, .v = 255 }, /* layer entry to L_FnMouse */
     [PAL_Web]  = { .h = 129, .s = 255, .v = 255 }, /* layer entry to L_Web */
@@ -167,14 +157,6 @@ const uint8_t PROGMEM ledmaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ________, PAL_SYM,  PAL_SYM,  PAL_SYM,  PAL_SYM,  PAL_SPC,                               PAL_SYM,  PAL_SYM,  PAL_SYM,  PAL_SYM,  PAL_SYM,  ________,
     ________, ________, ________, ________, ________,           ________,          ________,           _lleave_, ________, XXXXXXXX, XXXXXXXX, ________,
                                             ________, ________, ________,          ________, ________, ________
-  ),
-  [L_Phrase] = LEDMAP_moonlander(
-    ________, ________, ________, ________, ________, ________, ________,          ________, ________, ________, ________, ________, ________, ________,
-    ________, ________, ________, ________, ________, ________, ________,          ________, ________, ________, ________, ________, ________, ________,
-    PAL_SUP,  ________, ________, ________, ________, ________, ________,          ________, ________, ________, ________, ________, ________, _lleave_,
-    PAL_SUB,  ________, ________, ________, ________, ________,                              ________, ________, ________, ________, ________, ________,
-    ________, ________, ________, PAL_SPLT, PAL_JOIN,           PAL_SEG,           PAL_FLTR,           ________, ________, ________, ________, ________,
-                                            PAL_TMTB, PAL_COMM, PAL_TABS,          PAL_TABS, PAL_TAB,  PAL_SINS
   ),
   [L_Numbers] = LEDMAP_moonlander(
     ________, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,          ________, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,

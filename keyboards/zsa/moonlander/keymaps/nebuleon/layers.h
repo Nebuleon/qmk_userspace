@@ -7,7 +7,6 @@ enum layers {
     L_WindowsTerminals, /* constraints: must be above the highest layout layer, L_MoveSelect and L_Control; must be within layers 0..15 */
     L_DvorakAccents,    /* constraints: must be above L_DvorakLX and L_Control */
     L_Symbols,          /* constraints: must be above the highest layout layer, L_MoveSelect and L_Control */
-    L_Phrase,           /* constraints: must be above the highest layout layer, L_MoveSelect and L_Control */
     L_Numbers,          /* constraints: must be above the highest layout layer, L_MoveSelect and L_Control */
     L_FnMouse,          /* constraints: must be above the highest layout layer, L_Numbers, L_MoveSelect and L_Control */
     L_Web,              /* constraints: must be above the highest layout layer, L_MoveSelect and L_Control */

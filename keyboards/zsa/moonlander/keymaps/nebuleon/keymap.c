@@ -8,7 +8,6 @@ enum custom_keycodes {
 #define TT_DvAc TT(L_DvorakAccents)
 #define TT_Move TT(L_MoveSelect)
 #define TT_Syms TT(L_Symbols)
-#define TT_Phrs TT(L_Phrase)
 #define TT_Nums TT(L_Numbers)
 #define TT_FnMs TT(L_FnMouse)
 #define TT_Web  TT(L_Web)
@@ -27,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [L_DvorakLX] = LAYOUT_moonlander(
     KC_ESC,  TD_1_F1, TD_2_F2, TD_3_F3, TD_4_F4, TD_5_F5, KC_PSCR,          TD_LOCK, TD_6_F6, TD_7_F7, TD_8_F8, TD_9_F9, TD_0F10, DF_DRaw,
     _______, TD_SCLC, TD_CMLA, TD_DTLP, TD_P_LB, TD_Y_UN, KC_UP,            KC_LEFT, TD_F_EQ, TD_G_RB, TD_C_RP, TD_R_RA, TD_X_RC, TT_Web,
-    KC_BSPC, TD_A_DL, TD_O_DQ, TD_E_MI, TD_U_PC, TD_I_AM, KC_DOWN,          KC_RGHT, TD_D_PI, TD_H_AT, TD_T_PL, TD_N_SQ, TD_S_TI, TT_Phrs,
+    KC_BSPC, TD_A_DL, TD_O_DQ, TD_E_MI, TD_U_PC, TD_I_AM, KC_DOWN,          KC_RGHT, TD_D_PI, TD_H_AT, TD_T_PL, TD_N_SQ, TD_S_TI, _______,
     KC_DEL,  TD_CLLD, TD_Q_EX, TD_J_SL, TD_K_BS, TD_L_NB,                            TD_B_DG, TD_M_HA, TD_W_AS, TD_V_QU, TD_Z_RD, _______,
     _______, KC_LGUI, SC_LAAP, TT_Move, TT_Nums,          TT_FnMs,          TD_LGUI,          TT_Syms, TT_DvAc, KC_RALT, _______, TT_RGBC,
                                         SC_LSSP, SC_LCEN, SC_TAWT,          TD_LALT, TD_LCTL, TD_LSFT
@@ -71,14 +70,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, FR_LDAQ, FR_EXLM, FR_SLSH, FR_BSLS, SC_NBSP,                            FR_DEG,  FR_HASH, FR_ASTR, FR_QUES, FR_RDAQ, _______,
     _______, _______, _______, _______, _______,          _______,          _______,          _leave_, _______, XXXXXXX, XXXXXXX, _______,
                                         _______, _______, _______,          _______, _______, _______
-  ),
-  [L_Phrase] = LAYOUT_moonlander(
-    _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
-    SC_CS_M, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _leave_,
-    SC_C_M,  _______, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, C(FR_E), C(FR_J),          TD_SEG,          C(S(FR_F)),        _______, _______, _______, _______, _______,
-                                        TD_TMTB,C(S(FR_M)),SC_CA_L,         SC_CA_R, KC_TAB, C(KC_INS)
   ),
   [L_Numbers] = LAYOUT_moonlander(
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,          _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,

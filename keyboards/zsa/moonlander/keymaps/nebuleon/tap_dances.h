@@ -53,9 +53,6 @@
     GENERATE(_W_AS, FR_W, FR_ASTR) \
     GENERATE(_V_QU, FR_V, FR_QUES) \
     GENERATE(_Z_RD, FR_Z, FR_RDAQ) \
-    /* On L_Phrase */ \
-    GENERATE(_SEG,  LCTL(KC_ENTER), LCTL(LSFT(KC_ENTER))) \
-    GENERATE(_TMTB, LCTL(FR_K), LCTL(LSFT(FR_K))) \
     /* On L_Web */ \
     GENERATE(_RFSH, KC_F5, LCTL(KC_F5)) \
 
