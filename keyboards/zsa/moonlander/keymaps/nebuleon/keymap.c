@@ -25,9 +25,9 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [L_DvorakLX] = LAYOUT_moonlander(
     KC_ESC,  TD_1_F1, TD_2_F2, TD_3_F3, TD_4_F4, TD_5_F5, KC_PSCR,          TD_LOCK, TD_6_F6, TD_7_F7, TD_8_F8, TD_9_F9, TD_0F10, DF_DRaw,
-    _______, TD_SCLC, TD_CMLA, TD_DTLP, TD_P_LB, TD_Y_UN, KC_UP,            KC_LEFT, TD_F_EQ, TD_G_RB, TD_C_RP, TD_R_RA, TD_X_RC, TT_Web,
-    KC_BSPC, TD_A_DL, TD_O_DQ, TD_E_MI, TD_U_PC, TD_I_AM, KC_DOWN,          KC_RGHT, TD_D_PI, TD_H_AT, TD_T_PL, TD_N_SQ, TD_S_TI, _______,
-    KC_DEL,  TD_CLLD, TD_Q_EX, TD_J_SL, TD_K_BS, TD_L_NB,                            TD_B_DG, TD_M_HA, TD_W_AS, TD_V_QU, TD_Z_RD, _______,
+    _______, TD_SCBS, TD_CMEX, TD_DTQU, TD_P_AT, TD_Y_AM, KC_UP,            KC_LEFT, TD_F_PI, TD_G_DL, TD_C_LP, TD_R_RP, TD_X_TI, TT_Web,
+    KC_BSPC, TD_A_SQ, TD_O_LB, TD_E_RB, TD_U_DQ, TD_I_UN, KC_DOWN,          KC_RGHT, TD_D_EQ, TD_H_PL, TD_T_MI, TD_N_AS, TD_S_SL, _______,
+    KC_DEL,  TD_CLLD, TD_Q_LC, TD_J_RC, TD_K_HA, TD_B_NB,                            TD_L_DG, TD_M_PC, TD_W_RA, TD_V_LA, TD_Z_RD, _______,
     _______, KC_LGUI, SC_LAAP, TT_Move, TT_Nums,          TT_FnMs,          TD_LGUI,          TT_Syms, TT_DvAc, KC_RALT, _______, TT_RGBC,
                                         SC_LSSP, SC_LCEN, SC_TAWT,          TD_LALT, TD_LCTL, TD_LSFT
   ),
@@ -65,17 +65,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [L_Symbols] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
-    _______, FR_LCBR, FR_LABK, FR_LPRN, FR_LBRC, FR_UNDS, _______,          _______, FR_EQL,  FR_RBRC, FR_RPRN, FR_RABK, FR_RCBR, _______,
-    _______, FR_DLR,  FR_DQUO, FR_MINS, FR_PERC, FR_AMPR, _______,          _______, FR_PIPE, FR_AT,   FR_PLUS, FR_QUOT, FR_TILD, _______,
-    _______, FR_LDAQ, FR_EXLM, FR_SLSH, FR_BSLS, SC_NBSP,                            FR_DEG,  FR_HASH, FR_ASTR, FR_QUES, FR_RDAQ, _______,
+    _______, FR_BSLS, FR_EXLM, FR_QUES, FR_AT,   FR_AMPR, _______,          _______, FR_PIPE, FR_DLR,  FR_RPRN, FR_LPRN, FR_TILD, _______,
+    _______, FR_QUOT, FR_LBRC, FR_RBRC, FR_DQUO, FR_UNDS, _______,          _______, FR_EQL,  FR_PLUS, FR_MINS, FR_ASTR, FR_SLSH, _______,
+    _______, FR_LDAQ, FR_LCBR, FR_RCBR, FR_HASH, SC_NBSP,                            FR_DEG,  FR_PERC, FR_RABK, FR_LABK, FR_RDAQ, _______,
     _______, _______, _______, _______, _______,          _______,          _______,          _leave_, _______, XXXXXXX, XXXXXXX, _______,
                                         _______, _______, _______,          _______, _______, _______
   ),
   [L_Numbers] = LAYOUT_moonlander(
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,          _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-    _______, FR_SCLN, FR_7,    FR_8,    FR_9,    FR_COMM, _______,          _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+    _______, FR_SCLN, FR_7,    FR_8,    FR_9,    FR_COMM, _______,          _______, XXXXXXX, FR_DLR,  FR_RPRN, FR_LPRN, XXXXXXX, _______,
     _______, FR_0,    FR_4,    FR_5,    FR_6,    FR_DOT,  _______,          _______, FR_EQL,  FR_PLUS, FR_MINS, FR_ASTR, FR_SLSH, _______,
-    _______, FR_COLN, FR_1,    FR_2,    FR_3,    SC_NBSP,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+    _______, FR_COLN, FR_1,    FR_2,    FR_3,    SC_NBSP,                            FR_DEG,  FR_PERC, XXXXXXX, XXXXXXX, XXXXXXX, _______,
     _______, _______, _______, _______, _leave_,          _______,          TD_LGUI,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,          TD_LALT, TD_LCTL, TD_LSFT
   ),
