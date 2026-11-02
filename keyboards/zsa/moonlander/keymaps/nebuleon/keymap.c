@@ -81,35 +81,35 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [L_FnMouse] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
-    _leave_, KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX, _______,          _______, XXXXXXX, KC_BTN1, KC_MS_U, KC_BTN2, KC_WH_U, _______,
-    _______, KC_F5,   KC_F6,   KC_F7,   KC_F8,   XXXXXXX, _______,          _______, XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, _______,
+    _leave_, KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX, _______,          _______, XXXXXXX, MS_BTN1, MS_UP,   MS_BTN2, MS_WHLU, _______,
+    _______, KC_F5,   KC_F6,   KC_F7,   KC_F8,   XXXXXXX, _______,          _______, XXXXXXX, MS_LEFT, MS_DOWN, MS_RGHT, MS_WHLD, _______,
     _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
     _______, _______, _______, _______, _______,          _______,          _______,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,          _______, _______, _______
   ),
   [L_Web] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
-    _______,C(S(FR_T)),TD_RFSH,C(FR_T), C(FR_W), SC_C_PL, _______,          _______, SC_CA_Z, KC_BTN1, KC_MS_U, KC_BTN2, KC_WH_U, _______,
-    _leave_, KC_UP,   KC_WBAK, KC_WFWD, KC_PGUP, SC_C_0,  _______,          _______, XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, _______,
+    _______,C(S(FR_T)),TD_RFSH,C(FR_T), C(FR_W), SC_C_PL, _______,          _______, SC_CA_Z, MS_BTN1, MS_UP,   MS_BTN2, MS_WHLU, _______,
+    _leave_, KC_UP,   KC_WBAK, KC_WFWD, KC_PGUP, SC_C_0,  _______,          _______, XXXXXXX, MS_LEFT, MS_DOWN, MS_RGHT, MS_WHLD, _______,
     _______, KC_DOWN, SC_CS_T, SC_C_T,  KC_PGDN, SC_C_MI,                            XXXXXXX, C(FR_V), C(FR_C), C(FR_X), C(FR_A), _______,
     _______, _______, _______, _______, _______,          _______,          _______,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,          _______, _______, _______
   ),
   [L_RGBControl] = LAYOUT_moonlander(
     QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, IL_TOGG, NK_TOGG,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-    EE_CLR,  XXXXXXX, RGB_SAI, RGB_VAI, RGB_HUI, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-    XXXXXXX, XXXXXXX, RGB_SAD, RGB_VAD, RGB_HUD, XXXXXXX, XXXXXXX,          XXXXXXX, KC_MPRV, KC_MRWD, KC_MPLY, KC_MFFD, KC_MNXT, XXXXXXX,
-    RGB_MOD, XXXXXXX, DM_REC1, DM_REC2, DM_RSTP, XXXXXXX,                            XXXXXXX, KC_VOLU, KC_MUTE, KC_VOLD, XXXXXXX, XXXXXXX,
+    EE_CLR,  XXXXXXX, RM_SATU, RM_VALU, RM_HUEU, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    XXXXXXX, XXXXXXX, RM_SATD, RM_VALD, RM_HUED, XXXXXXX, XXXXXXX,          XXXXXXX, KC_MPRV, KC_MRWD, KC_MPLY, KC_MFFD, KC_MNXT, XXXXXXX,
+    RM_NEXT, XXXXXXX, DM_REC1, DM_REC2, DM_RSTP, XXXXXXX,                            XXXXXXX, KC_VOLU, KC_MUTE, KC_VOLD, XXXXXXX, XXXXXXX,
 #if defined AUDIO_CLICKY && (defined MIDI_BASIC || defined MIDI_ADVANCED)
-    TG_Mus,  TG_MIDI, CK_TOGG, XXXXXXX, XXXXXXX,          RGB_TOG,          LC_TOGG,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _leave_,
+    TG_Mus,  TG_MIDI, CK_TOGG, XXXXXXX, XXXXXXX,          RM_TOGG,          LC_TOGG,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _leave_,
 #elif defined MIDI_BASIC || defined MIDI_ADVANCED
-    TG_Mus,  TG_MIDI, XXXXXXX, XXXXXXX, XXXXXXX,          RGB_TOG,          LC_TOGG,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _leave_,
+    TG_Mus,  TG_MIDI, XXXXXXX, XXXXXXX, XXXXXXX,          RM_TOGG,          LC_TOGG,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _leave_,
 #elif defined AUDIO_CLICKY
-    TG_Mus,  XXXXXXX, CK_TOGG, XXXXXXX, XXXXXXX,          RGB_TOG,          LC_TOGG,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _leave_,
+    TG_Mus,  XXXXXXX, CK_TOGG, XXXXXXX, XXXXXXX,          RM_TOGG,          LC_TOGG,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _leave_,
 #else
-    TG_Mus,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          RGB_TOG,          LC_TOGG,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _leave_,
+    TG_Mus,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          RM_TOGG,          LC_TOGG,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _leave_,
 #endif
-                                        RGB_SPI, RGB_SLD, RGB_SPD,          DT_UP,   DT_PRNT, DT_DOWN
+                                        RM_SPDU, RGB_SLD, RM_SPDD,          DT_UP,   DT_PRNT, DT_DOWN
   ),
   [L_Music] = LAYOUT_moonlander(
     MU_TOGG, MU_NEXT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
