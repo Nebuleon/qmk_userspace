@@ -16,14 +16,14 @@ enum custom_keycodes {
 #if defined MIDI_BASIC || defined MIDI_ADVANCED
 #    define TG_MIDI TG(L_MIDI)
 #endif
-#define DF_Dvor DF(L_DvorakLX)
+#define DF_Dvor DF(L_DvorakBLX)
 #define DF_DRaw DF(L_DvorakRaw)
 /* Other */
 #define _leave_ _______              /* denotes a key that must be transparent because it exits a layer */
 
 /* Modified: TO() layer keys are now DF() keys; TD() keys now have DANCE_ removed */
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [L_DvorakLX] = LAYOUT_moonlander(
+  [L_DvorakBLX] = LAYOUT_moonlander(
     KC_ESC,  TD_1_F1, TD_2_F2, TD_3_F3, TD_4_F4, TD_5_F5, KC_PSCR,          TD_LOCK, TD_6_F6, TD_7_F7, TD_8_F8, TD_9_F9, TD_0F10, DF_DRaw,
     _______, TD_SCBS, TD_CMEX, TD_DTQU, TD_P_AT, TD_Y_AM, KC_UP,            KC_LEFT, TD_F_PI, TD_G_DL, TD_C_LP, TD_R_RP, TD_X_TI, TT_Web,
     KC_BSPC, TD_A_SQ, TD_O_LB, TD_E_RB, TD_U_DQ, TD_I_UN, KC_DOWN,          KC_RGHT, TD_D_EQ, TD_H_PL, TD_T_MI, TD_N_AS, TD_S_SL, _______,
@@ -137,7 +137,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_MINS,          KC_EQL,  KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    DF_Dvor,
     KC_TAB,  KC_SLSH, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_LBRC,          KC_RBRC, KC_F,    KC_G,    KC_C,    KC_R,    KC_X,    KC_ESC,
     KC_CAPS, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,    KC_QUOT,          KC_BSLS, KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_ENT,
-    KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_L,                               KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_RSFT,
+    KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_B,                               KC_L,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_RSFT,
     KC_LCTL, KC_LGUI, KC_LALT, KC_SPC,  KC_BSPC,          KC_PGUP,          KC_UP,            KC_DEL,  KC_RALT, KC_RGUI, KC_APP,  KC_RCTL,
                                         KC_HOME, KC_PGDN, KC_END,           KC_LEFT, KC_DOWN, KC_RGHT
   ),
@@ -171,7 +171,7 @@ layer_state_t qwerty_ctrl_layer(layer_state_t state, layer_state_t default_state
      * layer is below the L_Control layer, which provides the QWERTY layer when
      * Control is held, or the L_Control layer itself, and Control is held, the
      * L_Control layer needs to be activated. */
-    if (layer_state_cmp(default_state, L_DvorakLX)
+    if (layer_state_cmp(default_state, L_DvorakBLX)
      && (get_mods() & MOD_MASK_CTRL)
      && get_highest_layer(state | default_state) <= L_Control) {
         state |= (layer_state_t)1 << L_Control;

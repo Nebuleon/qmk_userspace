@@ -5,11 +5,11 @@
 /* The tap dances are defined here. */
 
 #define GENERATE_TAP_DANCES_TAP_DOUBLE_TAP_CUSTOM(GENERATE) \
-    /* On L_DvorakLX, layer clear or Lock button */ \
+    /* On L_DvorakBLX, layer clear or Lock button */ \
     GENERATE(_LOCK) \
 
 #define GENERATE_TAP_DANCES_TAP_HOLD(GENERATE) \
-    /* On L_DvorakLX, number row */ \
+    /* On L_DvorakBLX, number row */ \
     GENERATE(_1_F1, KC_1, KC_F1) \
     GENERATE(_2_F2, KC_2, KC_F2) \
     GENERATE(_3_F3, KC_3, KC_F3) \
@@ -20,7 +20,7 @@
     GENERATE(_8_F8, KC_8, KC_F8) \
     GENERATE(_9_F9, KC_9, KC_F9) \
     GENERATE(_0F10, KC_0, KC_F10) \
-    /* On L_DvorakLX, top row */ \
+    /* On L_DvorakBLX, top row */ \
     GENERATE(_SCBS, FR_SCLN, FR_BSLS) \
     GENERATE(_CMEX, FR_COMM, FR_EXLM) \
     GENERATE(_DTQU, FR_DOT, FR_QUES) \
@@ -31,7 +31,7 @@
     GENERATE(_C_LP, FR_C, FR_RPRN) \
     GENERATE(_R_RP, FR_R, FR_LPRN) \
     GENERATE(_X_TI, FR_X, FR_TILD) \
-    /* On L_DvorakLX, home (middle) row */ \
+    /* On L_DvorakBLX, home (middle) row */ \
     GENERATE(_A_SQ, FR_A, FR_QUOT) \
     GENERATE(_O_LB, FR_O, FR_LBRC) \
     GENERATE(_E_RB, FR_E, FR_RBRC) \
@@ -42,7 +42,7 @@
     GENERATE(_T_MI, FR_T, FR_MINS) \
     GENERATE(_N_AS, FR_N, FR_ASTR) \
     GENERATE(_S_SL, FR_S, FR_SLSH) \
-    /* On L_DvorakLX, bottom row */ \
+    /* On L_DvorakBLX, bottom row */ \
     GENERATE(_CLLD, FR_COLN, FR_LDAQ) \
     GENERATE(_Q_LC, FR_Q, FR_LCBR) \
     GENERATE(_J_RC, FR_J, FR_RCBR) \
@@ -66,7 +66,7 @@
     GENERATE(_RFSH, KC_F5, LCTL(KC_F5)) \
 
 #define GENERATE_TAP_DANCES_TOGGLE_HOLD_MOD(GENERATE) \
-    /* On L_DvorakLX, right thumb cluster */ \
+    /* On L_DvorakBLX, right thumb cluster */ \
     GENERATE(_LCTL, MOD_LCTL) \
     GENERATE(_LSFT, MOD_LSFT) \
     GENERATE(_LALT, MOD_LALT) \

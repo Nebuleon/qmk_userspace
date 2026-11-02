@@ -90,7 +90,7 @@ void clear_lock_press(tap_dance_state_t *state, void *user_data) {
     if (default_layer_state != 0) {
         layer_state_set(0);
     } else {
-        layer_state_set((layer_state_t)1 << L_DvorakLX);
+        layer_state_set((layer_state_t)1 << L_DvorakBLX);
     }
 
     if (state->count > 1) {
