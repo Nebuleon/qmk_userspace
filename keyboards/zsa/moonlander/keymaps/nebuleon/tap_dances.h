@@ -53,6 +53,15 @@
     GENERATE(_W_RA, FR_W, FR_RABK) \
     GENERATE(_V_LA, FR_V, FR_LABK) \
     GENERATE(_Z_RD, FR_Z, FR_RDAQ) \
+    /* On L_DvorakAccents, top row */ \
+    GENERATE(_Y_S,  FR_Y, LSFT(FR_Y)) \
+    GENERATE(_C_S,  FR_C, LSFT(FR_C)) \
+    /* On L_DvorakAccents, home (middle) row */ \
+    GENERATE(_A_S,  FR_A, LSFT(FR_A)) \
+    GENERATE(_O_S,  FR_O, LSFT(FR_O)) \
+    GENERATE(_E_S,  FR_E, LSFT(FR_E)) \
+    GENERATE(_U_S,  FR_U, LSFT(FR_U)) \
+    GENERATE(_I_S,  FR_I, LSFT(FR_I)) \
     /* On L_Web */ \
     GENERATE(_RFSH, KC_F5, LCTL(KC_F5)) \
 

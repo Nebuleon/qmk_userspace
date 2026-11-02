@@ -57,8 +57,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [L_DvorakAccents] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, FR_Y,    _______,          _______, XXXXXXX, XXXXXXX, FR_C,    XXXXXXX, XXXXXXX, _______,
-    _______, FR_A,    FR_O,    FR_E,    FR_U,    FR_I,    _______,          _______, FR_DIAE, FR_ACUT, FR_DCIR, FR_DGRV, FR_CEDL, _______,
+    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, TD_Y_S,  _______,          _______, XXXXXXX, XXXXXXX, TD_C_S,  XXXXXXX, XXXXXXX, _______,
+    _______, TD_A_S,  TD_O_S,  TD_E_S,  TD_U_S,  TD_I_S,  _______,          _______, FR_DIAE, FR_ACUT, FR_DCIR, FR_DGRV, FR_CEDL, _______,
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
     _______, XXXXXXX, XXXXXXX, _______, _______,          _______,          XXXXXXX,          _______, _leave_, XXXXXXX, _______, _______,
                                         _______, _______, _______,          XXXXXXX, XXXXXXX, XXXXXXX
