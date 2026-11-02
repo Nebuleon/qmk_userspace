@@ -25,11 +25,11 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [L_DvorakBLX] = LAYOUT_moonlander(
     KC_ESC,  TD_1_F1, TD_2_F2, TD_3_F3, TD_4_F4, TD_5_F5, KC_PSCR,          TD_LOCK, TD_6_F6, TD_7_F7, TD_8_F8, TD_9_F9, TD_0F10, DF_DRaw,
-    _______, TD_SCBS, TD_CMEX, TD_DTQU, TD_P_AT, TD_Y_AM, KC_UP,            KC_LEFT, TD_F_PI, TD_G_DL, TD_C_LP, TD_R_RP, TD_X_TI, TT_Web,
-    KC_BSPC, TD_A_SQ, TD_O_LB, TD_E_RB, TD_U_DQ, TD_I_UN, KC_DOWN,          KC_RGHT, TD_D_EQ, TD_H_PL, TD_T_MI, TD_N_AS, TD_S_SL, _______,
-    KC_DEL,  TD_CLLD, TD_Q_LC, TD_J_RC, TD_K_HA, TD_B_NB,                            TD_L_DG, TD_M_PC, TD_W_RA, TD_V_LA, TD_Z_RD, _______,
-    _______, KC_LGUI, SC_LAAP, TT_Move, TT_Nums,          TT_FnMs,          TD_LGUI,          TT_Syms, TT_DvAc, KC_RALT, _______, TT_RGBC,
-                                        SC_LSSP, SC_LCEN, SC_TAWT,          TD_LALT, TD_LCTL, TD_LSFT
+    TT_FnMs, TD_SCBS, TD_CMEX, TD_DTQU, TD_P_AT, TD_Y_AM, KC_UP,            KC_LEFT, TD_F_PI, TD_G_DL, TD_C_LP, TD_R_RP, TD_X_TI, _______,
+    TT_Web,  TD_A_SQ, TD_O_LB, TD_E_RB, TD_U_DQ, TD_I_UN, KC_DOWN,          KC_RGHT, TD_D_EQ, TD_H_PL, TD_T_MI, TD_N_AS, TD_S_SL, KC_BSPC,
+    KC_LSFT, TD_CLLD, TD_Q_LC, TD_J_RC, TD_K_HA, TD_B_NB,                            TD_L_DG, TD_M_PC, TD_W_RA, TD_V_LA, TD_Z_RD, KC_DEL,
+    KC_LCTL, KC_LGUI, KC_LALT, TT_Move, TT_Nums,          _______,          TD_LGUI,          TT_Syms, TT_DvAc, SC_RAAP, _______, TT_RGBC,
+                                        KC_SPC,  KC_ENT,  SC_TAWT,          TD_LALT, TD_LCTL, TD_LSFT
   ),
   [L_Control] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
@@ -44,16 +44,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, SC_CS_L, SC_S_L,  SC_S_R,  SC_CS_R, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, SC_CS_H, SC_S_H,  SC_S_E,  SC_CS_E, _______,
     _______, SC_C_L,  KC_LEFT, KC_RGHT, SC_C_R,  KC_UP,   XXXXXXX,          XXXXXXX, KC_PGUP, SC_C_H,  KC_HOME, KC_END,  SC_C_E,  _______,
     _______, SC_C_BS, KC_BSPC, KC_DEL,  SC_C_DL, KC_DOWN,                            KC_PGDN, C(FR_V), C(FR_C), C(FR_X), C(FR_A), _______,
-    _______, _______, _______, _______, _leave_,          _______,          _______,          _______, _______, DM_PLY1, DM_PLY2, _______,
-                                        _______, _______, _leave_,          _______, _______, _______
+    _______, _______, _______, _leave_, _______,          _______,          _______,          _______, _______, DM_PLY1, DM_PLY2, _______,
+                                        _______, _______, _______,          _______, _______, _______
   ),
   [L_WindowsTerminals] = LAYOUT_moonlander(
     _______, SC_CF1,  SC_CF2,  SC_CF3,  SC_CF4,  SC_CF5,  _______,          _______, SC_CF6,  SC_CF7,  SC_CF8,  SC_CF9,  SC_CF10, _______,
     _______, KC_F3,   KC_F9,   KC_F10,  KC_F4,   SC_G_PL, _______,          _______, XXXXXXX, SC_GSF1, SC_GSF2, SC_GSF3, SC_GSF4, _______,
     _______, SC_CGSL, SC_S_L,  SC_S_R,  SC_CGSR, SC_G_0,  _______,          _______, XXXXXXX, SC_GF1,  SC_GF2,  SC_GF3,  SC_GF4,  _______,
     _______, XXXXXXX, SC_S_T,  KC_TAB,  XXXXXXX, SC_G_MI,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-    _______, _______, _______, _______, _______,          _leave_,          _______,          _______, _______, _______, _______, _______,
-                                        _______, _______, _______,          _______, _______, _______
+    _______, _______, _______, _______, _______,          _______,          _______,          _______, _______, _______, _______, _______,
+                                        _______, _______, _leave_,          _______, _______, _______
   ),
   [L_DvorakAccents] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
@@ -81,16 +81,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [L_FnMouse] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
-    _______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX, _______,          _______, XXXXXXX, KC_BTN1, KC_MS_U, KC_BTN2, KC_WH_U, _______,
+    _leave_, KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX, _______,          _______, XXXXXXX, KC_BTN1, KC_MS_U, KC_BTN2, KC_WH_U, _______,
     _______, KC_F5,   KC_F6,   KC_F7,   KC_F8,   XXXXXXX, _______,          _______, XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, _______,
     _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-    _______, _______, _______, _______, _______,          _leave_,          _______,          _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______,          _______,          _______,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,          _______, _______, _______
   ),
   [L_Web] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
     _______,C(S(FR_T)),TD_RFSH,C(FR_T), C(FR_W), SC_C_PL, _______,          _______, SC_CA_Z, KC_BTN1, KC_MS_U, KC_BTN2, KC_WH_U, _______,
-    _______, KC_UP,   KC_WBAK, KC_WFWD, KC_PGUP, SC_C_0,  _______,          _______, XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, _leave_,
+    _leave_, KC_UP,   KC_WBAK, KC_WFWD, KC_PGUP, SC_C_0,  _______,          _______, XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, _______,
     _______, KC_DOWN, SC_CS_T, SC_C_T,  KC_PGDN, SC_C_MI,                            XXXXXXX, C(FR_V), C(FR_C), C(FR_X), C(FR_A), _______,
     _______, _______, _______, _______, _______,          _______,          _______,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,          _______, _______, _______

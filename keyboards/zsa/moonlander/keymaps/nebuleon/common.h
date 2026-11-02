@@ -7,9 +7,7 @@
 #include "tap_dances.h"
 
 /* Key shortcuts */
-#define SC_LAAP MT(MOD_LALT, KC_APP)
-#define SC_LSSP MT(MOD_LSFT, KC_SPC)
-#define SC_LCEN MT(MOD_LCTL, KC_ENT)
+#define SC_RAAP MT(MOD_RALT, KC_APP)
 #define SC_TAWT LT(L_WindowsTerminals, KC_TAB)
 #define SC_NBSP LCTL(LSFT(KC_SPC))
 #define SC_CS_L LCTL(LSFT(KC_LEFT))

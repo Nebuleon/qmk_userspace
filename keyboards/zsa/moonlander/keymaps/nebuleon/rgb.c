@@ -114,10 +114,10 @@ const HSV PROGMEM led_palette[] = {
 const uint8_t PROGMEM ledmaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [L_DvorakBLX] = LEDMAP_moonlander(
     PAL_ESC,  PAL_DIGF, PAL_DIGF, PAL_DIGF, PAL_DIGF, PAL_DIGF, PAL_PSCR,          PAL_LOCK, PAL_DIGF, PAL_DIGF, PAL_DIGF, PAL_DIGF, PAL_DIGF, PAL_RawI,
-    ________, PAL_SYM,  PAL_SYM,  PAL_SYM,  PAL_DLTR, PAL_DLTR, PAL_NAV1,          PAL_NAV1, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_Web,
-    PAL_BSPC, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_NAV1,          PAL_NAV1, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_Phrs,
-    PAL_DEL,  PAL_SYM,  PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR,                              PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, ________,
-    ________, PAL_MOD,  PAL_MOD,  PAL_Move, PAL_Nums,           PAL_FnMs,          PAL_MOD,            PAL_Syms, PAL_Accs, PAL_MOD,  ________, PAL_RGBC,
+    PAL_FnMs, PAL_SYM,  PAL_SYM,  PAL_SYM,  PAL_DLTR, PAL_DLTR, PAL_NAV1,          PAL_NAV1, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, ________,
+    PAL_Web,  PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_NAV1,          PAL_NAV1, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_BSPC,
+    PAL_MOD,  PAL_SYM,  PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR,                              PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DLTR, PAL_DEL,
+    PAL_MOD,  PAL_MOD,  PAL_MOD,  PAL_Move, PAL_Nums,           ________,          PAL_MOD,            PAL_Syms, PAL_Accs, PAL_MOD,  ________, PAL_RGBC,
                                             PAL_SPC,  PAL_ENT,  PAL_TAB,           PAL_MOD,  PAL_MOD,  PAL_MOD
   ),
   [L_Control] = LEDMAP_moonlander(
@@ -141,8 +141,8 @@ const uint8_t PROGMEM ledmaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ________, PAL_SHDE, PAL_MIN,  PAL_MAX,  PAL_CLSE, PAL_ZIN,  ________,          ________, XXXXXXXX, PAL_WSMO, PAL_WSMO, PAL_WSMO, PAL_WSMO, ________,
     ________, PAL_SCRN, PAL_TILE, PAL_TILE, PAL_SCRN, PAL_ZRST, ________,          ________, XXXXXXXX, PAL_WSSW, PAL_WSSW, PAL_WSSW, PAL_WSSW, ________,
     ________, XXXXXXXX, PAL_WNDW, PAL_WNDW, XXXXXXXX, PAL_ZOUT,                              XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,
-    ________, ________, ________, ________, ________,           _lleave_,          ________,           ________, ________, ________, ________, ________,
-                                            ________, ________, ________,          ________, ________, ________
+    ________, ________, ________, ________, ________,           ________,          ________,           ________, ________, ________, ________, ________,
+                                            ________, ________, _lleave_,          ________, ________, ________
   ),
   [L_DvorakAccents] = LEDMAP_moonlander(
     ________, ________, ________, ________, ________, ________, ________,          ________, ________, ________, ________, ________, ________, ________,
@@ -170,16 +170,16 @@ const uint8_t PROGMEM ledmaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [L_FnMouse] = LEDMAP_moonlander(
     ________, ________, ________, ________, ________, ________, ________,          ________, ________, ________, ________, ________, ________, ________,
-    ________, PAL_FN,   PAL_FN,   PAL_FN,   PAL_FN,   XXXXXXXX, ________,          ________, XXXXXXXX, PAL_MBTN, PAL_MMOV, PAL_MBTN, PAL_MWHL, ________,
+    _lleave_, PAL_FN,   PAL_FN,   PAL_FN,   PAL_FN,   XXXXXXXX, ________,          ________, XXXXXXXX, PAL_MBTN, PAL_MMOV, PAL_MBTN, PAL_MWHL, ________,
     ________, PAL_FN,   PAL_FN,   PAL_FN,   PAL_FN,   XXXXXXXX, ________,          ________, XXXXXXXX, PAL_MMOV, PAL_MMOV, PAL_MMOV, PAL_MWHL, ________,
     ________, PAL_FN,   PAL_FN,   PAL_FN,   PAL_FN,   XXXXXXXX,                              XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,
-    ________, ________, ________, ________, ________,           _lleave_,          ________,           ________, ________, ________, ________, ________,
+    ________, ________, ________, ________, ________,           ________,          ________,           ________, ________, ________, ________, ________,
                                             ________, ________, ________,          ________, ________, ________
   ),
   [L_Web] = LEDMAP_moonlander(
     ________, ________, ________, ________, ________, ________, ________,          ________, ________, ________, ________, ________, ________, ________,
     ________, PAL_RSTR, PAL_RFSH, PAL_TABS, PAL_CLSE, PAL_ZIN,  ________,          ________, PAL_SIDE, PAL_MBTN, PAL_MMOV, PAL_MBTN, PAL_MWHL, ________,
-    ________, PAL_NAV1, PAL_WEBN, PAL_WEBN, PAL_NAV2, PAL_ZRST, ________,          ________, XXXXXXXX, PAL_MMOV, PAL_MMOV, PAL_MMOV, PAL_MWHL, _lleave_,
+    _lleave_, PAL_NAV1, PAL_WEBN, PAL_WEBN, PAL_NAV2, PAL_ZRST, ________,          ________, XXXXXXXX, PAL_MMOV, PAL_MMOV, PAL_MMOV, PAL_MWHL, ________,
     ________, PAL_NAV1, PAL_TABS, PAL_TABS, PAL_NAV2, PAL_ZOUT,                              XXXXXXXX, PAL_PSTE, PAL_COPY, PAL_CUT,  PAL_SELA, ________,
     ________, ________, ________, ________, ________,           ________,          ________,           ________, ________, ________, ________, ________,
                                             ________, ________, ________,          ________, ________, ________
