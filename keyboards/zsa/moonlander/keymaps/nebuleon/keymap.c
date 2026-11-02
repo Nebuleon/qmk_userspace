@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, SC_CF1,  SC_CF2,  SC_CF3,  SC_CF4,  SC_CF5,  _______,          _______, SC_CF6,  SC_CF7,  SC_CF8,  SC_CF9,  SC_CF10, _______,
     _______, KC_F3,   KC_F9,   KC_F10,  KC_F4,   SC_G_PL, _______,          _______, XXXXXXX, SC_GSF1, SC_GSF2, SC_GSF3, SC_GSF4, _______,
     _______, SC_CGSL, SC_S_L,  SC_S_R,  SC_CGSR, SC_G_0,  _______,          _______, XXXXXXX, SC_GF1,  SC_GF2,  SC_GF3,  SC_GF4,  _______,
-    _______, XXXXXXX, SC_S_TB, KC_TAB,  XXXXXXX, SC_G_MI,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+    _______, XXXXXXX, SC_S_T,  KC_TAB,  XXXXXXX, SC_G_MI,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
     _______, _______, _______, _______, _______,          _leave_,          _______,          _______, _______, _______, _______, _______,
                                         _______, _______, _______,          _______, _______, _______
   ),
@@ -88,12 +88,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                         _______, _______, _______,          TD_LALT, TD_LCTL, TD_LSFT
   ),
   [L_Web] = LAYOUT_moonlander(
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,          _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-    _______, XXXXXXX, XXXXXXX,C(KC_EQL),XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _leave_,
-    _______, XXXXXXX, XXXXXXX, C(KC_0), XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-    _______, XXXXXXX, XXXXXXX,C(KC_MINS),XXXXXXX,XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-    _______, XXXXXXX, XXXXXXX, XXXXXXX, TD_RFSH,          KC_WBAK,          KC_WFWD,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-                                        KC_UP,   KC_PGUP, C(S(KC_TAB)),   C(KC_TAB), KC_PGDN, KC_DOWN
+    _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
+    _______,C(S(FR_T)),TD_RFSH,C(FR_T), C(FR_W), SC_C_PL, _______,          _______, SC_CA_Z, KC_BTN1, KC_MS_U, KC_BTN2, KC_WH_U, _______,
+    _______, KC_UP,   KC_WBAK, KC_WFWD, KC_PGUP, SC_C_0,  _______,          _______, XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, _leave_,
+    _______, KC_DOWN, SC_CS_T, SC_C_T,  KC_PGDN, SC_C_MI,                            XXXXXXX, C(FR_V), C(FR_C), C(FR_X), C(FR_A), _______,
+    _______, _______, _______, _______, _______,          _______,          _______,          _______, _______, _______, _______, _______,
+                                        _______, _______, _______,          _______, _______, _______
   ),
   [L_RGBControl] = LAYOUT_moonlander(
     QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, IL_TOGG, NK_TOGG,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,

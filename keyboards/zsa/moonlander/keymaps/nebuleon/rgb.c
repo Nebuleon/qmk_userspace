@@ -47,13 +47,14 @@ const HSV PROGMEM led_palette[] = {
     [PAL_SHDE] = { .h =  43, .s = 255, .v = 128 }, /* Toggle window shading shortcut on L_WindowsTerminals: (Alt+)F3 */
     [PAL_MIN]  = { .h =  43, .s = 255, .v = 255 }, /* Minimize window shortcut on L_WindowsTerminals: (Alt+)F9 */
     [PAL_MAX]  = { .h =  86, .s = 255, .v = 255 }, /* Toggle window maximization shortcut on L_WindowsTerminals: (Alt+)F10 */
-    [PAL_CLSE] = { .h =   0, .s = 255, .v = 255 }, /* Close window shortcut on L_WindowsTerminals: (Alt+)F4 */
+    [PAL_CLSE] = { .h =   0, .s = 255, .v = 255 }, /* Close window shortcut on L_WindowsTerminals: (Alt+)F4; L_Web: Ctrl+W */
+    [PAL_RSTR] = { .h =   0, .s = 255, .v = 127 }, /* Restore last tab shortcut on L_Web: Ctrl+Shift+T */
     [PAL_TILE] = { .h = 129, .s = 255, .v = 255 }, /* Window tiling shortcuts on L_WindowsTerminals: (Alt+)Shift+Left, (Alt+)Shift+Right */
     [PAL_SCRN] = { .h = 129, .s = 191, .v = 255 }, /* Move window one screen left/right shortcuts on L_WindowsTerminals: Ctrl+GUI+(Alt+)Shift+Left, Ctrl+GUI+(Alt+)Shift+Right */
     [PAL_WNDW] = { .h = 129, .s = 255, .v = 128 }, /* Window navigation shortcuts on L_WindowsTerminals: (Alt+)Shift+Tab, (Alt+)Tab */
     [PAL_WSSW] = { .h = 129, .s = 255, .v = 128 }, /* Workspace switching shortcuts on L_WindowsTerminals: GUI+(Alt+)Shift+F<number> */
     [PAL_WSMO] = { .h = 172, .s = 255, .v = 128 }, /* Window move to workspace shortcuts on L_WindowsTerminals: GUI+(Alt+)F<number> */
-    [PAL_TABS] = { .h = 215, .s = 255, .v = 255 }, /* keys for moving between tabs in L_Web */
+    [PAL_TABS] = { .h = 215, .s = 255, .v = 255 }, /* keys for moving between tabs and creating them in L_Web */
     [PAL_MBTN] = { .h = 112, .s = 255, .v = 255 }, /* mouse buttons */
     [PAL_MMOV] = { .h = 112, .s = 255, .v = 128 }, /* mouse movement */
     [PAL_MWHL] = { .h =   0, .s =   0, .v = 192 }, /* mouse wheel */
@@ -61,7 +62,8 @@ const HSV PROGMEM led_palette[] = {
     [PAL_ZOUT] = { .h =  43, .s = 255, .v = 128 }, /* zoom out: Ctrl+- */
     [PAL_ZRST] = { .h =  86, .s = 255, .v = 255 }, /* zoom reset: Ctrl+0 */
     [PAL_RFSH] = { .h =  86, .s = 255, .v = 255 }, /* Refresh: F5, Ctrl+F5 */
-    [PAL_WEBN] = { .h =  86, .s = 255, .v = 255 }, /* Web navigation: WWW Back, WWW Forward */
+    [PAL_SIDE] = { .h =   7, .s = 223, .v = 248 }, /* Expand or collapse sidebar (Firefox) on Web: Ctrl+Alt+Z */
+    [PAL_WEBN] = { .h = 172, .s = 255, .v = 255 }, /* Web navigation: WWW Back, WWW Forward */
     [PAL_BOOT] = { .h =   0, .s = 255, .v = 255 }, /* QK_BOOT, reboots to the bootloader */
     [PAL_CLR]  = { .h =   0, .s = 255, .v = 255 }, /* EE_CLR, erases the EEPROM */
     [PAL_RGBM] = { .h =   0, .s =   0, .v = 255 }, /* RGB_MOD, changes the active RGB animation */
@@ -175,12 +177,12 @@ const uint8_t PROGMEM ledmaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                             ________, ________, ________,          PAL_MOD,  PAL_MOD,  PAL_MOD
   ),
   [L_Web] = LEDMAP_moonlander(
-    ________, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,          ________, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,
-    ________, XXXXXXXX, XXXXXXXX, PAL_ZIN,  XXXXXXXX, XXXXXXXX, XXXXXXXX,          XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, _lleave_,
-    ________, XXXXXXXX, XXXXXXXX, PAL_ZRST, XXXXXXXX, XXXXXXXX, XXXXXXXX,          XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,
-    ________, XXXXXXXX, XXXXXXXX, PAL_ZOUT, XXXXXXXX, XXXXXXXX,                              XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,
-    ________, XXXXXXXX, XXXXXXXX, XXXXXXXX, PAL_RFSH,           PAL_WEBN,          PAL_WEBN,           XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,
-                                            PAL_NAV1, PAL_NAV2, PAL_TABS,          PAL_TABS, PAL_NAV2, PAL_NAV1
+    ________, ________, ________, ________, ________, ________, ________,          ________, ________, ________, ________, ________, ________, ________,
+    ________, PAL_RSTR, PAL_RFSH, PAL_TABS, PAL_CLSE, PAL_ZIN,  ________,          ________, PAL_SIDE, PAL_MBTN, PAL_MMOV, PAL_MBTN, PAL_MWHL, ________,
+    ________, PAL_NAV1, PAL_WEBN, PAL_WEBN, PAL_NAV2, PAL_ZRST, ________,          ________, XXXXXXXX, PAL_MMOV, PAL_MMOV, PAL_MMOV, PAL_MWHL, _lleave_,
+    ________, PAL_NAV1, PAL_TABS, PAL_TABS, PAL_NAV2, PAL_ZOUT,                              XXXXXXXX, PAL_PSTE, PAL_COPY, PAL_CUT,  PAL_SELA, ________,
+    ________, ________, ________, ________, ________,           ________,          ________,           ________, ________, ________, ________, ________,
+                                            ________, ________, ________,          ________, ________, ________
   ),
   [L_RGBControl] = LEDMAP_moonlander(
     PAL_BOOT, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, PAL_ILTG, PAL_NKRO,          XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX,

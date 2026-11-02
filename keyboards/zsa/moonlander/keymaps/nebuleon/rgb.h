@@ -90,6 +90,7 @@ enum palette {
     PAL_ZOUT,
     PAL_ZRST,
     PAL_RFSH,
+    PAL_SIDE,
     PAL_WEBN,
     PAL_BOOT,
     PAL_CLR,
