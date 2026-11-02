@@ -60,8 +60,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, TD_Y_S,  _______,          _______, XXXXXXX, XXXXXXX, TD_C_S,  XXXXXXX, XXXXXXX, _______,
     _______, TD_A_S,  TD_O_S,  TD_E_S,  TD_U_S,  TD_I_S,  _______,          _______, FR_DIAE, FR_ACUT, FR_DCIR, FR_DGRV, FR_CEDL, _______,
     _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-    _______, XXXXXXX, XXXXXXX, _______, _______,          _______,          XXXXXXX,          _______, _leave_, XXXXXXX, _______, _______,
-                                        _______, _______, _______,          XXXXXXX, XXXXXXX, XXXXXXX
+    _______, XXXXXXX, XXXXXXX, _______, _______,          _______,          _______,          _______, _leave_, XXXXXXX, _______, _______,
+                                        _______, _______, _______,          _______, _______, _______
   ),
   [L_Symbols] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
@@ -76,16 +76,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, FR_SCLN, FR_7,    FR_8,    FR_9,    FR_COMM, _______,          _______, XXXXXXX, FR_DLR,  FR_RPRN, FR_LPRN, XXXXXXX, _______,
     _______, FR_0,    FR_4,    FR_5,    FR_6,    FR_DOT,  _______,          _______, FR_EQL,  FR_PLUS, FR_MINS, FR_ASTR, FR_SLSH, _______,
     _______, FR_COLN, FR_1,    FR_2,    FR_3,    SC_NBSP,                            FR_DEG,  FR_PERC, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-    _______, _______, _______, _______, _leave_,          _______,          TD_LGUI,          _______, _______, _______, _______, _______,
-                                        _______, _______, _______,          TD_LALT, TD_LCTL, TD_LSFT
+    _______, _______, _______, _______, _leave_,          _______,          _______,          _______, _______, _______, _______, _______,
+                                        _______, _______, _______,          _______, _______, _______
   ),
   [L_FnMouse] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,
     _______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  XXXXXXX, _______,          _______, XXXXXXX, KC_BTN1, KC_MS_U, KC_BTN2, KC_WH_U, _______,
     _______, KC_F5,   KC_F6,   KC_F7,   KC_F8,   XXXXXXX, _______,          _______, XXXXXXX, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_D, _______,
     _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   XXXXXXX,                            XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-    _______, _______, _______, _______, _______,          _leave_,          TD_LGUI,          _______, _______, _______, _______, _______,
-                                        _______, _______, _______,          TD_LALT, TD_LCTL, TD_LSFT
+    _______, _______, _______, _______, _______,          _leave_,          _______,          _______, _______, _______, _______, _______,
+                                        _______, _______, _______,          _______, _______, _______
   ),
   [L_Web] = LAYOUT_moonlander(
     _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______, _______, _______,

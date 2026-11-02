@@ -149,8 +149,8 @@ const uint8_t PROGMEM ledmaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ________, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, PAL_ACC,  ________,          ________, XXXXXXXX, XXXXXXXX, PAL_ACC,  XXXXXXXX, XXXXXXXX, ________,
     ________, PAL_ACC,  PAL_ACC,  PAL_ACC,  PAL_ACC,  PAL_ACC,  ________,          ________, PAL_ACC,  PAL_ACC,  PAL_ACC,  PAL_ACC,  PAL_ACC,  ________,
     ________, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX,                              XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,
-    ________, XXXXXXXX, XXXXXXXX, ________, ________,           ________,          XXXXXXXX,           ________, _lleave_, XXXXXXXX, ________, ________,
-                                            ________, ________, ________,          XXXXXXXX, XXXXXXXX, XXXXXXXX
+    ________, XXXXXXXX, XXXXXXXX, ________, ________,           ________,          ________,           ________, _lleave_, XXXXXXXX, ________, ________,
+                                            ________, ________, ________,          ________, ________, ________
   ),
   [L_Symbols] = LEDMAP_moonlander(
     ________, ________, ________, ________, ________, ________, ________,          ________, ________, ________, ________, ________, ________, ________,
@@ -165,16 +165,16 @@ const uint8_t PROGMEM ledmaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ________, PAL_SYM,  PAL_DIG,  PAL_DIG,  PAL_DIG,  PAL_SYM,  ________,          ________, XXXXXXXX, PAL_SYM,  PAL_SYM,  PAL_SYM,  XXXXXXXX, ________,
     ________, PAL_DIG,  PAL_DIG,  PAL_DIG,  PAL_DIG,  PAL_SYM,  ________,          ________, PAL_SYM,  PAL_SYM,  PAL_SYM,  PAL_SYM,  PAL_SYM,  ________,
     ________, PAL_SYM,  PAL_DIG,  PAL_DIG,  PAL_DIG,  PAL_SPC,                               PAL_SYM,  PAL_SYM,  XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,
-    ________, ________, ________, ________, _lleave_,           ________,          PAL_MOD,            ________, ________, ________, ________, ________,
-                                            ________, ________, ________,          PAL_MOD,  PAL_MOD,  PAL_MOD
+    ________, ________, ________, ________, _lleave_,           ________,          ________,           ________, ________, ________, ________, ________,
+                                            ________, ________, ________,          ________, ________, ________
   ),
   [L_FnMouse] = LEDMAP_moonlander(
     ________, ________, ________, ________, ________, ________, ________,          ________, ________, ________, ________, ________, ________, ________,
     ________, PAL_FN,   PAL_FN,   PAL_FN,   PAL_FN,   XXXXXXXX, ________,          ________, XXXXXXXX, PAL_MBTN, PAL_MMOV, PAL_MBTN, PAL_MWHL, ________,
     ________, PAL_FN,   PAL_FN,   PAL_FN,   PAL_FN,   XXXXXXXX, ________,          ________, XXXXXXXX, PAL_MMOV, PAL_MMOV, PAL_MMOV, PAL_MWHL, ________,
     ________, PAL_FN,   PAL_FN,   PAL_FN,   PAL_FN,   XXXXXXXX,                              XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, XXXXXXXX, ________,
-    ________, ________, ________, ________, ________,           _lleave_,          PAL_MOD,            ________, ________, ________, ________, ________,
-                                            ________, ________, ________,          PAL_MOD,  PAL_MOD,  PAL_MOD
+    ________, ________, ________, ________, ________,           _lleave_,          ________,           ________, ________, ________, ________, ________,
+                                            ________, ________, ________,          ________, ________, ________
   ),
   [L_Web] = LEDMAP_moonlander(
     ________, ________, ________, ________, ________, ________, ________,          ________, ________, ________, ________, ________, ________, ________,
